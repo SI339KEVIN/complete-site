@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
 main {
   padding-top: 30px;
   font-family: 'Roboto', sans-serif;
@@ -42,6 +44,23 @@ body.dark-mode {
 }
 
 .dark-toggle.dark-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  border: none;
+  border-radius: 20px; 
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.scroll-to-top.dark-mode {
   background-color: #fff;
   color: #000;
 }
