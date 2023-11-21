@@ -1,0 +1,325 @@
+main {
+  padding-top: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url("../images/light-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body.dark-mode {
+  background-image: url("../images/dark-background.jpg");
+}
+
+body {
+  padding-top: 30px;
+  color: var(--text-color-light);
+  background-color: var(--bg-color-light);
+}
+
+body.dark-mode {
+  color: #fff;
+  background-color: #000;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 20px; 
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dark-toggle.dark-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+h1 {
+  margin-left: 10px;
+  font-size: 40px;
+  text-align: start;
+  font-weight: bold;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+h2 {
+  margin-left: 10px;
+  padding-top: 20px;
+  font-size: 30px;
+  text-align: start;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+h3 {
+  margin-left: 10px;
+  padding-top: 20px;
+  font-size: 20px;
+  text-align: start;
+  font-weight: bold;
+}
+
+/* Mobile Nav Bar */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+  font-family: 'Roboto', sans-serif;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: blue;
+  text-decoration: underline;
+}
+
+/* Card Styling */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.card.dark-mode {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  background-color: #000;
+}
+
+.card p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+img {
+  border-radius: 5px 5px 5px 5px;
+  transform: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+/* Travel Card Styling */
+.card-travel {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 5px;
+  margin: 10px auto;
+  text-align: center; 
+  background-color: #fff;
+}
+
+.card-travel.dark-mode {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+  background-color: #000;
+}
+
+.card-travel img {
+  width: 100%;
+  max-height: 400px;  
+  object-fit: cover;  
+  display: block;     
+  margin: 0 auto;     
+}
+
+.card-travel p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* Gallery Styling */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 700px;
+  margin: 20px auto 0 auto;
+}
+
+.gallery img {
+  height: 100%;
+  max-height: 300px;
+  padding: 2%;
+  border-radius: 5%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Travel Gallery */
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 700px;
+  margin: 20px auto 0 auto;
+}
+
+.travel-gallery .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+/* Likes Styling */
+.likes-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card.likes {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.card.likes.dark-mode {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Reduced motion */
+.still-image {
+  display: none;
+}
+
+.motion-image {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .still-image {
+    display: block;
+  }
+
+  .motion-image {
+    display: none;
+  }
+}
+
+/* Skip link */
+
+#skip {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 4px;
+  transition: top 0.3s ease;
+  text-decoration: none;
+  z-index: 1000; 
+}
+
+#skip:focus {
+  top: 10px; 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #skip {
+      transition: none;
+  }
+}
+
+/* CSS for tablet view */
+@media (min-width: 768px) {
+  .tablet-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 20px;
+  }
+
+  .likes-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-column {
+    padding-right: 40px;
+    margin-top: -20px;
+  }
+
+  .card {
+    margin-bottom: 10px;
+  }
+}
+
+/* CSS for desktop view */
+@media (min-width: 1024px) {
+  .likes-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right-column {
+    padding-right: 40px;
+    margin-top: 0;
+  }
+
+  .travel-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* I used the W3Schools navbar code to make the navbar. I changed the items in the bar and added underline to the active page. Finally, I changed the color of the selected element to blue.*/
